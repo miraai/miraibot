@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-    slack, err := hanu.New("xoxb-156379277474-qAuZAZo0K4Qk6ZScgysHLevW")
+    slack, err := hanu.New("TOKEN")
 
     if err != nil {
         log.Fatal(err)
