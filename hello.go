@@ -45,6 +45,10 @@ func main() {
     slack.Command("joke", func(conv hanu.ConversationInterface) {
         conv.Reply("So this programmer goes out on a date with a hot girl")
     })
+	
+    slack.Command("joke", func(conv hanu.ConversationInterface) {
+        conv.Reply("Why did the Integer drown? ‘Coz he couldn’t Float!")
+    })
 
     slack.Command("L<word>", func(conv hanu.ConversationInterface) {
         str, _ := conv.String("word")
