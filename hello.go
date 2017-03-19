@@ -41,6 +41,27 @@ func main() {
     slack.Command("woopwoop", func(conv hanu.ConversationInterface) {
         conv.Reply("http://i.imgur.com/pz5gnhq.gif")
     })
+	
+    slack.Command("joke", func(conv hanu.ConversationInterface) {
+        conv.Reply("So this programmer goes out on a date with a hot girl")
+    })
+
+    slack.Command("L<word>", func(conv hanu.ConversationInterface) {
+        str, _ := conv.String("word")
+        
+        switch str{
+            case "05":
+                conv.Reply("https://goo.gl/LeFwf3")
+            case "06":
+                conv.Reply("https://goo.gl/xavjQO")
+            case "07":
+                conv.Reply("https://goo.gl/pyF4AN")
+            case "08":
+                conv.Reply("https://goo.gl/U3TYLv")
+            default:
+                panic("pls stop trying")
+        }
+    })
 
     slack.Listen()
 }
