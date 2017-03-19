@@ -27,7 +27,7 @@ func main() {
     })
 
     slack.Command("version", func(conv hanu.ConversationInterface) {
-        conv.Reply("Thanks for asking! I'm running `%s`", Version)
+        conv.Reply("I'm running `%s`", Version)
     })
 
     slack.Command("CS324", func(conv hanu.ConversationInterface) {
